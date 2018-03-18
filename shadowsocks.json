@@ -1,0 +1,13 @@
+{
+"server":"138.197.199.15",
+"port_password":
+{
+"8001": "password1",
+"8002": "password2",
+"8003": "password3",
+"8004": "password4"
+},
+"local_port":1080,
+"timeout":600,
+"method":"chacha20"
+}
