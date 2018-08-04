@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="cn">
 <head>
-<!-- 2018-05-23 Wed 00:54 -->
+<!-- 2018-05-23 Wed 16:16 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bypass Guide</title>
@@ -59,6 +59,94 @@ for the JavaScript code in this tag.
 <body>
 <div id="content">
 <h1 class="title">Bypass Guide</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org75a3e00">ATTENTION(Legal Notices)</a></li>
+<li><a href="#org1548222">Overview</a></li>
+<li><a href="#org855dc46">Install and Configuration</a>
+<ul>
+<li><a href="#org8a6b8e0">Mobile Phone</a>
+<ul>
+<li><a href="#org173cded">Android</a></li>
+</ul>
+</li>
+<li><a href="#org7ac516f">Computer</a>
+<ul>
+<li><a href="#orga1f7c87">Windows</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+Please check this webpage as far as possible on the computer, as this webpage currently
+does not support the good experience of the mobile phone. Of course, I didn't have much
+interest in using web design to make it adapt to the mobile phone. Thank you for your
+understanding. :)
+</p>
+
+<p>
+Currently this tutorial only provides installation methods for Android and Windows. Of
+course my desire is to have a method for all platforms. If your platform is iOS, Mac OS,
+etc. please contact me(see bottom), we will continue to complete this document together.
+Before I was successfully installed on these platforms, but now I do not have these
+platforms so it is not good for screenshots of presentation so need your help in the
+future.
+</p>
+
+
+<p>
+If you don't understand anything in the process of reading or operating, or if a link
+fails, please email me.
+</p>
+
+<p>
+You can reach any corner of the world across the firewall. Have fun. :)
+</p>
+
+<div id="outline-container-org75a3e00" class="outline-2">
+<h2 id="org75a3e00">ATTENTION(Legal Notices)</h2>
+<div class="outline-text-2" id="text-org75a3e00">
+<p>
+Once you begin to browse this document, you will comply with the following statement I
+made. If you not, please stop reading, thanks.
+</p>
+<ul class="org-ul">
+<li>The technology that anyone learns from this document CAN ONLY be used for study, work,
+scientific research, and entertainment purposes.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>It MUST NOT violate Chinese laws, and MUST NOT intentionally disseminate information
+outside of GFW to the mainland of China. It MUST NOT publish excessive remarks. Any
+violation of the law is HIS OWN responsibility and HAS NOTHING to do with me.</li>
+
+<li>For possible reasons, the techniques described in this document may not achieve the
+desired results. The author does not guarantee any of them. Even the authors are not
+responsible for solving the problems caused by these operations. However, based on past
+experience, what is said here is workable and will not bring any problems.</li>
+
+<li>Any individual or group that violates this statement HAS NOTHING to do with me.</li>
+</ul>
+</div>
+</div>
+
+
+
+<div id="outline-container-org1548222" class="outline-2">
+<h2 id="org1548222">Overview</h2>
+<div class="outline-text-2" id="text-org1548222">
+<p>
+See bottom for Email address of author. This article is completely a rookie for computers
+and mobile phones. As long as you patiently follow the documentation down you can always
+visit Google.
+</p>
+
 <p>
 Due to some reasons, it is not possible to access and use well-known websites and
 applications such as Google and Facebook in mainland China. This article does not intend
@@ -76,10 +164,239 @@ computer platform is divided into three systems: Linux, Windows, and Mac. So nex
 follow these classifications to discuss how to achieve the access to Google and other
 sites on these platforms.
 </p>
+
+<p>
+It is getting harder and harder now to bypass. Now the common practice is to send your
+access request to a server first, instead of sending it directly to a Google server. The
+intermediate server will visit Google for you and return the result. Well, first of all,
+you have to have your own intermediate server. Usually this intermediate server is
+available in two ways. The first is to build your own server, and how to build your own
+server is a tricky problem. Anyone who reads this document can ask the author how to do
+this(see bottom). The other is to buy a server that has already been built by others. Here
+I recommend a company that provides this kind of service: <a href="https://www.fyzhuji.com">https://www.fyzhuji.com</a>. And if
+you decide to buy services provided by the company, I suggest you join the author's
+self-built server instead of buying the company provided, so you not only save the trouble
+of creating a server, but also avoid spending more to obtain the freedom of information
+that you should get. If you think so, please contact the author. In short, I will assume
+in this article that you already have a hypothetical server with the following
+parameters(of course it doesn't work, you have to have its own available server).
+</p>
+
+<p>
+<a id="orga701f66"></a>
+</p>
+<ul class="org-ul">
+<li>Server Name: 192.168.1.1</li>
+
+<li>Remote Port: 8000</li>
+
+<li>Password: 123456</li>
+
+<li>Encrypt Method: chacha20</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org855dc46" class="outline-2">
+<h2 id="org855dc46">Install and Configuration</h2>
+<div class="outline-text-2" id="text-org855dc46">
+</div>
+<div id="outline-container-org8a6b8e0" class="outline-3">
+<h3 id="org8a6b8e0">Mobile Phone</h3>
+<div class="outline-text-3" id="text-org8a6b8e0">
+<p>
+Mobile phones are mainly divided into Android and iOS systems.
+</p>
+</div>
+<div id="outline-container-org173cded" class="outline-4">
+<h4 id="org173cded">Android</h4>
+<div class="outline-text-4" id="text-org173cded">
+</div>
+<ul class="org-ul">
+<li><a id="org65552f8"></a>Install<br>
+<div class="outline-text-5" id="text-org65552f8">
+<p>
+First we need to install the Android client. Obviously, these clients are hardly available
+in mainland China. In my github I provided the software for download: <a href="https://github.com/Puqiyuan/Shadowsocks_Install/blob/master/Shadowsocks.apk">APK for
+Android</a>. This is open source software, so you shouldn’t worry about security issues such
+as back doors.
+</p>
+</div>
+</li>
+
+<li><a id="org9a6fed6"></a>Configuration<br>
+<div class="outline-text-5" id="text-org9a6fed6">
+<p>
+Shadowsocks software runs after the installation is complete. It is probably as shown in
+the initial run.
+</p>
+
+
+<div id="orgbc2304a" class="figure">
+<p><img src="./images/androidPhone1.jpg" alt="androidPhone1.jpg" width="250px">
+</p>
+<p><span class="figure-number">Figure 1: </span>Picture of Shadowsocks initial run</p>
+</div>
+
+<p>
+Then click the + symbol in the top right corner. After clicking it looks like this:
+</p>
+
+<div id="org9d15982" class="figure">
+<p><img src="./images/androidPhone2.jpg" alt="androidPhone2.jpg" width="250px">
+</p>
+<p><span class="figure-number">Figure 2: </span>Picture of after click + symbol</p>
+</div>
+
+<p>
+Then click "Manual Settings" in the top right corner. There are three ways to import the
+server. Other methods can be tried after you are familiar with this software. After
+clicking it looks like this:
+</p>
+
+<div id="orgd978ca3" class="figure">
+<p><img src="./images/androidPhone3.jpg" alt="androidPhone3.jpg" width="250px">
+</p>
+<p><span class="figure-number">Figure 3: </span>Picture of after click "Manual Setting"</p>
+</div>
+
+<p>
+Of course, these parameters are not what we assumed <a href="#orga701f66">here</a>. So we must modify it according
+to the server parameters assumed <a href="#orga701f66">here</a>. Parameters not mentioned in the screenshot do not
+need to be modified. The figure after modifying the parameters is as follows.
+</p>
+
+<div id="orgb145a1e" class="figure">
+<p><img src="./images/androidPhone4.jpg" alt="androidPhone4.jpg" width="250px">
+</p>
+<p><span class="figure-number">Figure 4: </span>Picture of after modified parameters</p>
+</div>
+
+<p>
+Then click the small tick in the upper right corner to complete the parameter
+configuration. Return to the main interface after completion.
+</p>
+
+<div id="org77df809" class="figure">
+<p><img src="./images/androidPhone5.jpg" alt="androidPhone5.jpg" width="250px">
+</p>
+<p><span class="figure-number">Figure 5: </span>Picture of completion of config</p>
+</div>
+
+<p>
+Then click on the server entry 192.168.1.1. Makes it has a green bar on the left to
+achieve the purpose of selecting this server. Like the figure:
+</p>
+
+<div id="org23782a6" class="figure">
+<p><img src="./images/androidPhone6.jpg" alt="androidPhone6.jpg" width="250px">
+</p>
+<p><span class="figure-number">Figure 6: </span>Picture of running a server</p>
+</div>
+
+<p>
+Of course, now you can't see the delay. That's because this server is our hypothetical
+one. It doesn't work. If it is a normal working server you should see something like this:
+</p>
+
+<div id="org760a126" class="figure">
+<p><img src="./images/androidPhone7.jpg" alt="androidPhone7.jpg" width="250px">
+</p>
+<p><span class="figure-number">Figure 7: </span>Picture of running a server in that a working  server</p>
+</div>
+
+<p>
+If you see a delay like above picture, it means that you have crossed the firewall and now
+you can reach anywhere in the world. You can now visit <a href="https://www.google.com">https://www.google.com</a>. Have
+fun. :)
+</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7ac516f" class="outline-3">
+<h3 id="org7ac516f">Computer</h3>
+<div class="outline-text-3" id="text-org7ac516f">
+<p>
+The main computer system is divided into Linux, Windows and Mac OS. Then I installed the
+bypass software on these three systems.
+</p>
+</div>
+<div id="outline-container-orga1f7c87" class="outline-4">
+<h4 id="orga1f7c87">Windows</h4>
+<div class="outline-text-4" id="text-orga1f7c87">
+</div>
+<ul class="org-ul">
+<li><a id="orgde85371"></a>Install<br>
+<div class="outline-text-5" id="text-orgde85371">
+<p>
+The Windows installation package is in the form of zip. Check <a href="https://github.com/shadowsocks/shadowsocks-windows/releases">here</a> for download,
+like below picture:
+</p>
+
+<div id="orge188493" class="figure">
+<p><img src="./images/windows1.jpg" alt="windows1.jpg" width="500px">
+</p>
+<p><span class="figure-number">Figure 8: </span>Download for Windows install package</p>
+</div>
+
+<p>
+Click on Shadowsocks-X.X.XX.zip to download and unzip and run. During the initial run, you
+may encounter problems with the version of the .Net framework being too low. At this time,
+the Windows system will prompt you to upgrade, you only need to follow the prompt to
+upgrade. The interface after starting the running is shown below.
+</p>
+
+<div id="org2c4d991" class="figure">
+<p><img src="./images/windows2.jpg" alt="windows2.jpg" width="350px">
+</p>
+<p><span class="figure-number">Figure 9: </span>Initial running interface</p>
+</div>
+</div>
+</li>
+
+<li><a id="orgc9af93b"></a>Configure<br>
+<div class="outline-text-5" id="text-orgc9af93b">
+<p>
+Then configure according to the hypothetical server <a href="#orga701f66">mentioned</a> above. Pay attention to
+first click on the "添加" before configuration at lower left corner. Last click "确定".
+</p>
+
+
+
+<div id="orga09c606" class="figure">
+<p><img src="./images/windows3.jpg" alt="windows3.jpg" width="350px">
+</p>
+<p><span class="figure-number">Figure 10: </span>Complete the configuration</p>
+</div>
+
+<p>
+After completion, there will be a small aircraft symbol in the lower right corner of the
+screen. Click it and configure it as shown in the figure below.
+</p>
+
+<div id="org0f15ea6" class="figure">
+<p><img src="./images/windows4.jpg" alt="windows4.jpg" width="350px">
+</p>
+<p><span class="figure-number">Figure 11: </span>Enable proxy in PAC mode</p>
+</div>
+
+<p>
+You can now visit <a href="https://www.google.com">https://www.google.com</a>.
+</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Qiyuan Pu(pqy7172@gmail.com)</p>
-<p class="date">Created: 2018-05-23 Wed 00:54</p>
+<p class="date">Created: 2018-05-23 Wed 16:16</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
