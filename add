@@ -1,0 +1,19 @@
+#!/bin/bash
+
+ssh root@167.99.108.111 'bash update.sh'
+
+scp root@167.99.108.111:/root/shadowsocks.json /home/pqy7172/.shadowsocks.json
+
+scp root@167.99.108.111:/root/Info.csv /home/pqy7172/.Info.csv
+
+scp /home/pqy7172/.shadowsocks.json root@138.68.25.76:/root/shadowsocks.json
+
+scp /home/pqy7172/.Info.csv root@138.68.25.76:/root/Info.csv
+
+ssh root@138.68.25.76 'mv /etc/shadowsocks.json /etc/shadowsocks_bak.json; sed -i "s/167.99.108.111/138.68.25.76/g" ./shadowsocks.json; cp ./shadowsocks.json /etc/shadowsocks.json; /usr/bin/python /usr/local/bin/ssserver -c /etc/shadowsocks.json -d restart'
+
+/usr/bin/ssh-add /home/pqy7172/.ssh/cs3
+
+scp /home/pqy7172/.shadowsocks.json puqiyuan@cs3.swfu.edu.cn:/home/staff/puqiyuan/shadowsocks.json
+
+scp /home/pqy7172/.Info.csv puqiyuan@cs3.swfu.edu.cn:/home/staff/puqiyuan/Info.csv
