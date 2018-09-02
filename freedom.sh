@@ -4,6 +4,7 @@ export LC_ALL=C
 pip install shadowsocks
 apt-get install python-m2crypto -y
 apt-get install build-essential -y
+apt-get install mosh -y
 
 file="/root/libsodium-1.0.10.tar.gz"
 if [ -f "$file" ]; then
@@ -79,6 +80,8 @@ cat /root/sysctl.conf >> /etc/sysctl.conf
 sysctl -p
 
 ssserver -c /etc/shadowsocks.json -d restart
+
+locale-gen zh_CN.UTF-8
 
 echo
 echo
