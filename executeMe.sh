@@ -14,11 +14,24 @@ fi
 
 scp puqiyuan@cs3.swfu.edu.cn:/home/staff/puqiyuan/shadowsocks.json ./shadowsocks.json
 
+scp puqiyuan@cs3.swfu.edu.cn:/home/staff/puqiyuan/Info.csv ./Info.csv
+
+scp puqiyuan@cs3.swfu.edu.cn:/home/staff/puqiyuan/Info.csv ./port
+
 sed -i "s/.*server.*/\"server\":\"$ip\",/g" shadowsocks.json
 
 scp ./shadowsocks.json  root@$ip:/etc/shadowsocks.json
 
+scp ./shadowsocks.json  root@$ip:/root/shadsocks.json
+
+scp ./Info.csv  root@$ip:/root/Info.csv
+
+scp ./port  root@$ip:/root/port
+
+scp ./update.sh root@$ip:/root/update.sh
+
 ssh root@$ip 'bash -s' < ./freedom.sh
 
 sudo rm ./shadowsocks.json
-sudo rm ./shadowsocks.jsone
+sudo rm ./Info.csv
+sudo rm ./port

@@ -6,6 +6,8 @@ scp root@167.99.108.111:/root/shadowsocks.json /home/pqy7172/.shadowsocks.json
 
 scp root@167.99.108.111:/root/Info.csv /home/pqy7172/.Info.csv
 
+scp root@167.99.108.111:/root/port /home/pqy7172/.port
+
 scp /home/pqy7172/.shadowsocks.json root@138.68.25.76:/root/shadowsocks.json
 
 scp /home/pqy7172/.Info.csv root@138.68.25.76:/root/Info.csv
@@ -17,3 +19,5 @@ ssh root@138.68.25.76 'mv /etc/shadowsocks.json /etc/shadowsocks_bak.json; sed -
 scp /home/pqy7172/.shadowsocks.json puqiyuan@cs3.swfu.edu.cn:/home/staff/puqiyuan/shadowsocks.json
 
 scp /home/pqy7172/.Info.csv puqiyuan@cs3.swfu.edu.cn:/home/staff/puqiyuan/Info.csv
+
+scp /home/pqy7172/.port puqiyuan@cs3.swfu.edu.cn:/home/staff/puqiyuan/port
